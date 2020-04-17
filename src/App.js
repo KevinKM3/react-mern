@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 
 import './App.css';
 
@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
-          Hunter's <code>src/App.js</code> App.
+          Hunter <code>src/App.js</code> App.
         </p>
         <a
           className="App-link"
