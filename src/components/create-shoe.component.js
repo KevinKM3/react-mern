@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 
 export default class CreateShoe extends Component {
 
@@ -33,11 +34,15 @@ export default class CreateShoe extends Component {
 
     onSubmit(e) {
         e.preventDefault()
-        console.log(`Shoe successfully created!`);
-        console.log(`Name: ${this.state.name}`);
-        console.log(`Email: ${this.state.email}`);
-        console.log(`Id no: ${this.state.id}`);
-        
+
+        const shoeObject = {
+        name: this.state.name,
+        email: this.state.email,
+        id: this.state.id
+        };
+
+axios.post('http://localhost:4000/shoes/create-shoe', shoeObject.then(res => console.log(res.data));
+
         this.setState({name: '', email: '', id: ''})
     }
 
